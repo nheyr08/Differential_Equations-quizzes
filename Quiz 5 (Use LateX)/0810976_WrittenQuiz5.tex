@@ -1,0 +1,536 @@
+%\documentclass[dvips,12pt]{article}
+%\documentclass[12pt, onecolumn]{IEEEtran}
+\documentclass[onecolumn]{IEEEtran}
+\usepackage{setspace}
+\usepackage{amsmath}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage[dvips]{color}
+\usepackage{graphicx}
+\usepackage{anyfontsize}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{url}
+\allowdisplaybreaks
+\usepackage{fancyhdr}
+\usepackage[page]{totalcount}
+\pagestyle{fancy}
+\usepackage[ruled,vlined]{algorithm2e}
+
+\begin{document}
+{\LARGE \bf { 2020 Differential Equation Written Quiz 5} (True)}
+\\\\\\
+\bigskip
+{\large \bf {Tutorial}}
+\bigskip\\
+\\
+for the corresponding homogeneous system
+has been found. We use the method of variation of parameters to construct a particular solution, and hence the general solution, of the nonhomogeneous system (22).
+Since the general solution of the homogeneous system (23) is 
+\begin{equation}
+    \psi(t){c}
+\end{equation}
+it is natural to
+proceed as in Section 3.6 and to seek a solution of the nonhomogeneous system (22)
+by replacing the constant vector c by a vector function u(t). Thus we assume that
+\begin{equation}
+   x= \psi(t)u(t),
+\end{equation}                            (24)
+where u(t) is a vector to be found. Upon differentiating x as given by Eq. (24) and
+requiring that Eq. (22) be satisfied, we obtain
+\begin{equation}
+ \quad\psi(t)u(t)+\psi(t)\quad u'(t)=P(t)\psi(t)u(t) +g(t).
+\end{equation}    
+Since $\psi$(t) is a fundamental matrix,
+\begin{equation}
+ \quad\psi'(t)=P(t)\psi(t);
+\end{equation} hence Eq. (25) reduces to
+\begin{equation}
+ \psi(t)\quad u'(t)=g(t).
+\end{equation} 
+Recall that $\psi$(t) is nonsingular on any interval where P is continuous. Hence \begin{equation}
+ \psi^{-1}(t)
+\end{equation} 
+exists, and therefore
+\begin{equation}
+ \quad u'(t)= \psi^{-1}(t)
+\end{equation} 
+Thus for u(t) we can select any vector from the class of vectors that satisfy Eq. (27).
+These vectors are determined only up to an arbitrary additive constant vector;
+therefore, we denote u(t) by
+\begin{equation}
+ u(t)=\int\psi^{-1}(t)g(t)dt+c
+\end{equation} 
+where the constant vector c is arbitrary. If the integrals in Eq. (28) can be evaluated,
+then the general solution of the system (22) is found by substituting for u(t) from
+Eq. (28) in Eq. (24). However, even if the integrals cannot be evaluated, we can still
+write the general solution of Eq. (22) in the form
+\begin{equation}
+ x=\psi(t)c+psi(t)\int_{t_1}^{t}\psi^{-1}(s)g(s)ds,
+\end{equation} 
+where t1 is any point in the interval ($\alpha$, $\beta$).The first term on the right side of Eq. (29) is
+the general solution of the corresponding homogeneous system (23), and the second
+term is a particular solution of Eq. (22).
+Now let us consider the initial value problem consisting of the differential equation
+(22) and the initial condition
+\begin{equation}
+x(t_0)=x^{0}.
+\end{equation} 
+We can find the solution of this problem most conveniently if we choose the lower
+limit of integration in Eq. (29) to be the initial point t0. Then the general solution of
+the differential equation is
+\begin{equation}
+ x=\psi(t)c+psi(t)\int_{t_0}^{t}\psi^{-1}(s)g(s)ds.
+\end{equation} (31)
+For\begin{equation}
+t=t_0
+\end{equation}   the integral in Eq. (31) is zero, so the initial condition (30) is also satisfied
+if we choose
+\begin{equation}
+ x=\psi^{-1}(t_0)x^{0}.
+\end{equation} (32)
+Therefore,
+\begin{equation}
+ x=\psi(t)c+psi^{-1}(t_0)x^{0}+\int_{t_0}^{t}\psi^{-1}(s)g(s)ds.
+\end{equation}(33)
+is the solution of the given initial value problem. Again, although it is helpful to use\begin{equation}
+ \psi^{-1}
+\end{equation}  to write the solutions (29) and (33), it is usually better in particular cases to solve
+the necessary equations by row reduction than to calculate\begin{equation}
+ \psi^{-1}
+\end{equation} and substitute into
+Eqs. (29) and (33).
+The solution (33) takes a slightly simpler form if we use the fundamental matrix
+\begin{equation}
+ \phi(t)
+\end{equation}satisfying \begin{equation}
+ \phi(t_0)=I
+\end{equation}. In this case we have
+\begin{equation}
+ x=\phi(t)x^{0}+phi(t)\int_{t_0}^{t}\phi^{-1}(s)g(s)ds.
+\end{equation} (34)
+\\
+\\
+\\
+**************2***************** 
+\\
+\\
+\\Determine the radius of convergence of the power series
+\begin{equation}
+    \sum_{n=1}^{\infty}\frac{(x+1)}{n2^n}
+    \label{sum}
+\end{equation}
+We apply the ratio test:
+\begin{equation}
+  \lim_{x\to\infty}\left|\frac{(x+1)^n+1}{(n+1)^2n+1}\frac{n2^n}{(x+1)^n}  \right| \label{limits} =\frac{
+  \left|x+1\right|}{2}\lim_{n\to\infty}\frac{n}{n+1} \label{limits}=\frac{\left|x+1\right|}{2}
+    \label{limits}
+\end{equation}
+Thus the series converges absolutely for 
+    \begin{equation}
+    \left| x + 1\right| < 2
+    \end{equation}
+ or   \begin{equation}
+  −3 < x < 1
+    \end{equation}
+ , and diverges for
+   \begin{equation}
+    \left| x + 1\right| > 2
+    \end{equation}. The radius of convergence of the power series is $\rho$ = 2. Finally, we check the
+endpoints of the interval of convergence. At x = 1 the series becomes the harmonic series
+\begin{equation}
+     \sum_{n=1}^{\infty}\frac{1}{n}
+    \end{equation}
+    which diverges. At x = −3 we have
+    
+ \begin{equation}
+     \sum_{n=1}^{\infty}\frac{(-3+1)^n}{n2^n}= \sum_{n=1}^{\infty}\frac{(-1)^n}{n}
+    \end{equation}
+    which converges but does not converge absolutely. The series is said to converge conditionally at x = −3. To summarize, the given power series converges for \begin{equation} −3 ≤ x < 1 \end{equation}and diverges otherwise. It converge absolutely for  \begin{equation} −3 < x < 1 \end{equation}and has a radius of convergence 2.\\
+    \\
+    \\
+ ************3************
+ \\
+ \\
+ \begin{equation}
+     \lim{n\to \infty}\left|\frac{x^{2n+2}}{(n+1)!}\frac{n!}{x^{2n}}\right|=\lim{n\to \infty}\left|\frac{x^{2}n!}{(n+1)!x^{2n}}\right|=\left|x^2|\right|\lim{n\to \infty}\left|\frac{1}{(n+1)}\right|=0
+ \end{equation}
+ \\
+ Thus the radius is: \\
+ $\infty$
+ 
+ 
+ ***********4**********
+\\
+\\
+\\
+(a) Seek power series solutions of the differential equation about the given point x0; find the recurrence relation
+lets assume the solution Y is of the form
+\begin{equation}
+     \sum_{n=0}^{\infty}Cn.X^{n}
+    \end{equation}
+    then \begin{equation}
+   \quad y'      
+    \end{equation} 
+    becomes 
+    \begin{equation}
+     \sum_{n=1}^{\infty}Cn.n.X^{n-1}
+    \end{equation}
+    And \quad y'' is 
+ \begin{equation}
+     \sum_{n=2}^{\infty}Cn.n.(n-1).X^{n-2}
+    \end{equation}
+Now we consider \quad y''
+\begin{equation}
+     \sum_{n=0}^{\infty}C(n+2).(n+2).(n+1).X^{n}
+    \end{equation}
+ \quad y''+\quad y =0 
+can be written as :
+\begin{equation}
+     \sum_{n=0}^{\infty}X^{n}[ C(n+2).(n+2).(n+1)+Cn]=0
+    \end{equation}
+    Given we are considering x0 to be 0 then the sum also goes to zero since every thing cancels out.
+  (b) Find the first four terms in each of two solutions y1 and y2 (unless the series terminates sooner).
+By manually plugin values of n in our new sequence we notice that 
+for even values of n y1 
+\begin{equation}
+     \sum_{n=0}^{\infty}\frac{(-1)^{2n}}{(2m)!}.X^{2n}
+    \end{equation}
+    For odd values of n we get first solution y2
+\begin{equation}
+     \sum_{n=0}^{\infty}\frac{(-1)^{n}}{(2m+1)!}.X^{2n}
+    \end{equation}
+    The four terms for Y1 are
+    for n=0 we get 1
+      for n=1 we get
+ \begin{equation}
+      \frac{-1}{2}x^{2}
+    \end{equation}
+     for n=2 we get
+      \begin{equation}
+      \frac{1}{4!}x^{4}
+    \end{equation}
+     for n=3 we get
+      \begin{equation}
+      \frac{-1}{6!}x^{6}
+    \end{equation}
+     The four terms for Y2 are
+    for n=0 we get x
+      for n=1 we get
+    \begin{equation}
+      \frac{-1}{3}x^{3}
+    \end{equation}
+     for n=2 we get
+      \begin{equation}
+      \frac{1}{5!}x^{5}
+    \end{equation}
+     for n=3 we get
+      \begin{equation}
+      \frac{-1}{7!}x^{7}
+    \end{equation}
+    (c) By evaluating the Wronskian W(y1, y2)(x0), show that y1 and y2 form a fundamental set of solutions.
+    the Wronkskian gives:
+    Then we might ask what properties these functions have. For instance, can we be sure
+that Y1(X) and Y2(x) form a fundamental set of solutions? It follows at once from the
+series expansions that Y1(0) = 1 and Y2(0) = 0. By differentiating the series for Y1(x)
+and Y2(x) term by term, we find that
+    \begin{equation}
+        \quad Y1'(x)=Y2(x), \quad Y1'(x)=-Y2(x)
+    \end{equation}
+    Thus, at x = 0 we have \quad Y1'(0) = 1 and \quad Y2'(0) = 0. Consequently, the Wronskian of Y1
+and Y2 at x = 0 is
+   
+       \[    W(Y1,Y2)(0)= \left[ {\begin{array}{cc}
+   1 & 0 \\
+   0 & 1 \\
+  \end{array} } \right]\]=1,
+   
+    
+    so these functions do indeed form a fundamental set of solutions. By substituting −x
+for x
+    
+    (d) If possible, find the general term in each solution.
+    
+    Tthe general solution for each term yields: 
+        \begin{equation}
+      c_2m=\frac{(-1).C0}{(2m)!}
+    \end{equation}
+    \begin{equation}
+      c_{2m+1}=\frac{(-1)^m.C1}{(2m+1)!}
+    \end{equation}
+    \\
+    \\
+    **************5********
+    \\
+    \\
+We compare equation (1) with standard form
+    \begin{equation}
+        P(x)\quad y''+Q(x)\quad y' + R(x)y=0
+    \end{equation}
+    For singular points
+      \begin{equation}
+        P(x)=0
+    \end{equation}
+We have
+ \begin{equation}
+        P(x)=x^{2},Q(x)=x and R(x)=x^{2}-\frac{1}{9}
+    \end{equation}
+    By using limits to find the xo=0:
+    \begin{equation}
+       \lim_{x\to xo}(x-x0)\frac{Q(x)}{P(x)}=\lim_{x\to xo}x\frac{x}{x^2}=1
+       and \lim_{x\to xo}(x-x0)^{2}\frac{R(x)}{P(x)}=  \lim_{x\to xo}x^2(\frac{x^2-\frac{1}{9}}{x^2})=-\frac{1}{9}
+       \label{lim}
+    \end{equation}
+ Since both limts are finite so we can say
+ that $x = 0$ is a regular singular point
+\\
+\\
+\\
+*************6************
+\\
+\\
+\\
+
+For power series solutions  
+\begin{equation}
+    y=\sum_{n=0}^{\infty}a_n x^{r+n}  
+\end{equation}
+derivatives are respectively
+\begin{equation}
+   \quad y'=\sum_{n=0}^{\infty}(r+n)a_n x^{r+n-1}  
+\end{equation}
+and
+\begin{equation}
+   \quad y''=\sum_{n=0}^{\infty}(r+n-1)(r+n)a_n x^{r+n-2}  
+\end{equation}
+Substitute all these values into equation (1)
+we get:
+\begin{equation}
+   =>\sum_{n=0}^{\infty}(r+n-1)(r+n)a_n x^{r+n}+  \sum_{n=0}^{\infty}(r+n)a_n x^{r+n}+\sum_{n=0}^{\infty}a_n x^{r+n+2}-\frac{1}{9}\sum_{n=0}^{\infty}a_n x^{r+n}=0   
+\end{equation}
+Now we convert all summation to start at $N=2$
+\begin{equation}
+    r(r-1)a0x^r+(r+1)ra_1x^{r+1}+\sum_{N=2}^{\infty}(r+N)(r+N-1)a_Nx^r+(r+1)a_1x^{r+1}+\sum_{N=2}^{\infty}(r+N)a_Nx^{r+N}+\sum_{N=2}^{\infty}a_N-2x^{r+N}-\frac{1}{9}a_0x^r-\frac{1}{9}a_1x^r+1 -\frac{1}{9}\sum_{N=2}^{\infty}a_Nx^{r+N}=0
+    
+\end{equation} 
+ by takng sum and x and rearrange 
+ \begin{equation}
+ [   r(r-1) +r-\frac{1}{9}]a_0x^{r} +[ (r+1)r+ (r+1)-\frac{1}{9}]a1x^{r+1}+\sum_{N=2}^{\infty}[{(r+N)(r+N-1)+(r+N)-\frac{1}{9}}a_n+a_{n-2}]x^{r+N}=0
+ \end{equation}
+ after simplify
+ \begin{equation}
+     [r^2-\frac{1}{9}]a_0=0 
+     \end{equation}
+ \begin{equation}    
+     [(r+1)^2-\frac{1}{9}]a_1=0
+       \end{equation}
+  \begin{equation}     
+     [(r+n)^2-\frac{1}{9}]a_n+a_{n-2}=0
+ \end{equation}
+  where x bigger or equal to 2
+
+\begin{equation}
+     r^2-\frac{1}{9}]=(r-\frac{1}{3})(r+\frac{1}{3})=0) 
+\end{equation}
+So the roots : 
+
+$r_1$=\frac{1}{3}
+
+
+$r_2$=-\frac{1}{3}
+and Recurrence equation
+\begin{equation}
+    [(r_i+N^2)-\frac{1}{9}]a_N+a_N-2, 
+\end{equation} $i=1,2,3,..........$and $n>=2$
+
+Solution 6(c):-
+We know that larger root is $r=\frac{1}{3}$
+for this the recurrence relation is
+\begin{equation}
+    a_n=-\frac{a_N-2}{(N+\frac{1}{3}^2-\frac{1}{9}}=-\frac{a_N-2}{N(N+\frac{2}{3}}
+\end{equation}
+
+We can calculate coefficients of the sequence by putting values of $n=2,3,4,5.......$
+\begin{equation}
+    a_2=-\frac{a0}{2(2+
+    \frac{2}{3})}=-\frac{a0}{2^2(1+
+    \frac{1}{3})}
+   \end{equation}
+   \begin{equation}
+    a_3=0
+    \end{equation}
+    \begin{equation}
+    a_4=-\frac{a2}{4(4+
+    \frac{2}{3})}=-\frac{a0}{2^2(1+
+    \frac{1}{3})2^22(2+\frac{1}{3})}=\frac{a_0}{2^4.2.(1+\frac{1}{3})(2+\frac{1}{3})}
+    \end{equation}
+    \begin{equation}
+    a_5=0
+\end{equation}
+The solution is finally: :[]
+\\
+\\
+\\
+\\
+******* 7*********
+\\
+\\
+The Laplace transform of f(t)
+\begin{equation}
+    
+\mathscr{L}\{f(t)\}=\int_{0}^{\infty}f(t)e^{-st}dt=\int_{0}^{\infty}t^2sin(at)e^{-st}dt
+\lim_{A\to\infty}\int_{0}^{A}t^{2}sin(at)e^{-st}dt
+\label{int}
+\label{lim}
+
+\end{equation}
+\begin{equation}
+\left(  u=t  ,  dv=tsinh(at)e^{-st}dt 
+    du=dt ,           v=\int{0}{\infty}tsinh(at)dt  \right]
+\end{equation}
+V is $\int_{}{}tsinh(at)e^{-st}dt$
+we calculate v frst to get:
+\begin{equation}
+    \frac{t}{2}\left[ \frac{e^{(a-s)t}}{a-s}+\frac{e^{-(a+s)t}}{a+s}\right]- \frac{1}{2}\int_{}{}\left[\frac{e^{(a-s)t}}{a-s}+\frac{e^{-(a+s)t}}{a+s}dt\right]
+\end{equation}
+\begin{equation}
+    \frac{t}{2}\left[ \frac{e^{(a-s)t}}{a-s}+\frac{e^{-(a+s)t}}{a+s}\right]- \frac{1}{2} \left[\frac{e^{(a-s)t}}{(a-s)^2}+\frac{e^{-(a+s)t}}{(a+s)^2}dt\right]
+\end{equation}
+Doing the computations gets
+\begin{equation}
+\lim_{0\to \infty}
+\left(
+\frac{t^2}{2}
+\left[ 
+\frac{e^{(a-s)t}}{a-s}+\frac{e^{-(a+s)t}}{a+s}
+\right]
+\Big|_0^A
+-\int_{0}^{A}
+\left(\frac{1}{2}
+\left[\frac{e^{(a-s)t}}{(a-s)}
++\frac{e^{-(a+s)t}}{(a+s)}\right]
+-\frac{1}{2}
+\left[\frac{e^{(a-s)t}}{(a-s)^2}
++\frac{e^{-(a+s)t}}{(a+s)^2}\right]\right)dt\right)
+\end{equation}
+\\After several 
+computation we 
+ge 
+this 
+
+\begin{equation}
+    
+ \lim_{A\to\infty}  \left| 
+      \frac{A^2}{2}
+    \left[
+    \frac{e^{(a-s)A}}{(a-s)}
+    -\frac{e^{(a+s)A}}{(a+s)} 
+    \right]
+    -\frac{A}{2} \left[\frac{e^{(a-s)A}}{(a-s)^2}
+    -\frac{e^{(a+s)A}}{(a+s)^2}
+    \right]   
+    -\frac{1}{2(a-s}
+    \int_{0}^{A}\left[ te^{(a-s)t}dt-
+    \frac{1}{2(a+s)}\int_{0}{A}te^{-(a+s)t}dt
+    +\frac{1}{2} 
+  
+    \left[ \frac{e^{(a-s)t}}{(a-s)^3}+\frac{e^{(a-s)t}}{(a-s)^3}\right]\Big|_0^A\right]
+    \right|
+\end{equation}
+
+\begin{equation}
+    
+ \lim_{A\to\infty}  \left| 
+      \frac{A^2}{2}
+    \left[
+    \frac{e^{(a-s)A}}{(a-s)}
+    -\frac{e^{(a+s)A}}{(a+s)} 
+    \right]
+    -\frac{A}{2} \left[\frac{e^{(a-s)A}}{(a-s)^2}
+    -\frac{e^{(a+s)A}}{(a+s)^2}
+    \right]   
+    -\frac{1}{2(a-s)}
+    \left[
+    \frac{Ae^{(a-s)A}}{(a-s)}
+    -\frac{e^{(a-s)^A}}{(a-s)^2}
+    +\frac{1}{(a-s)^2}
+    \right]
+    -\frac{1}{2(a-s)}\left[
+    -\frac{Ae^{-(a-s)A}}{(a+s)}
+    -\frac{e^{-(a+s)^A}}{(a+s)^2} +\frac{1}{(a+s)^2}\right]
+    +\frac{1}{2}\left[\frac{e^{(a-s)A}}{(a-s)^3}
+    +\frac{e^{-(a-s)A}}{(a+s)^3}
+    \right]-\frac{1}{2}\left[\frac{1}{(a-s)^3}+\frac{1}{(a+s)^3}
+    \right]
+    \right|
+\end{equation}
+
+The Solution is
+\begin{equation}
+    F(s)=\frac{2a(a^2+3s^2)}{(s^2-a^2)^3}
+\end{equation}
+\\
+\\
+\\
+\\
+**************8************
+\\
+\\
+Theorem 6.2.1
+Suppose that f is continuous and \quad f' is piecewise continuous on any interval
+$0 ≤ t ≤ A$. Suppose further that there exist constants K, a, and M such that
+$|f(t)| ≤ Ke^at$ for $t ≥ M$. Then $ \mathscr{L}\{
+  \quad f'(t)\} $ exists for$ s > a$, and moreover,
+$\mathscr{L}\{
+ \quad f'(t)\} = s\mathscr{L}\{
+ f(t)\} − f(0) 
+$
+\\
+\\
+\\
+\\
+************9*************
+
+
+\begin{equation}
+ F(s)=\frac{8s^2-4s+12}{s(s^2+4)}=\frac{3s^2+12-4s+5s^2}{s(s^2+4)}=\frac{s(s^2+4)}{s(s^2+4)}-2.\frac{2s}{s(s^2+4)}+5.\frac{s^2}{(s(s^2+4)}
+ \end{equation} 
+ \begin{equation}
+=3.\mathscr{L}\{1\}-2.\mathscr{L}\{sin2t\}+5.\mathscr{L}\{cos2t\}=\mathscr{L}\{
+ 3-2sin2t+ 5cos2t\}
+ \end{equation}
+
+
+The solution becomes
+\begin{equation}
+ 3-2sin2t+ 5cos2t
+ \end{equation}
+
+\\
+\\
+\\
+
+*******10*************
+\\
+\\
+
+We know that
+\begin{equation}
+\mathscr{L}\{e^{at}sinbt\}=\frac{b}{(s-a)^2+b^2}
+\end{equation}
+\begin{equation}
+ F(s)=\frac{2s-3}{s^2+2s+10}=\frac{2s+2-5}{s^2+2s+10}=2.\frac{s+1}{(s+1)^2+3^2}-\frac{5}{3}\frac{3}{(s+1)^2+3^2}=\mathscr{L}\{e^{-t}cos3t\}
+ -\frac{5}{2}\mathscr{L}\{e^{-t}sin3t\}
+ \end{equation}
+ \begin{equation}
+ =\mathscr{L}\{2e^{-t}cos3t-\frac{5}{3}(e^{-t}sin3t)\}
+\end{equation}
+The solution is
+\begin{equation}
+2e^{-t}cos3t-\frac{5}{3}(e^{-t}sin3t)\}
+\end{equation}
+\end{document}
+ 
