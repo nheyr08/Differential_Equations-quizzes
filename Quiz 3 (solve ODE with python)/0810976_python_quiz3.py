@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Oct 22 21:04:02 2020
-
-@author: anvarkunanbaev
 """
 #<============= TASK 1 ==================>
 import numpy as np
