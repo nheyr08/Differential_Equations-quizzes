@@ -2,7 +2,7 @@
 """
 Created on Wed Dec  9 09:52:56 2020
 
-@author: wilso
+@author: Betsaleel Henry
 """
 import numpy as np
 import numpy.matlib
