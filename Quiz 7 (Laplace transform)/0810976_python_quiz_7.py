@@ -2,7 +2,7 @@
 """
 Created on Wed Dec 23 15:15:23 2020
 
-@author: wilso
+@author: Betsaleel Henry
 """
 
 from scipy import signal as sg
